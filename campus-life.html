@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles5.css">
+    <style>
+        /* Footer styling */
+        footer {
+            background-color: black;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .social-media {
+            margin-top: 10px;
+        }
+
+        .social-media a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .social-media a:hover {
+            text-decoration: underline;
+        }
+
+        /* Floating animation for elements over the footer */
+        @keyframes floating {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Styling for the animated icons */
+        .animated-footer-icons {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .animated-footer-icons img {
+            width: 50px;
+            margin: 0 15px;
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        .animated-footer-icons img:hover {
+            animation-play-state: paused;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Life - Government College of Engineering Kolhapur</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="gcoeklogo.png" alt="Government College of Engineering Kolhapur logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="campus-life.html">Campus Life</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Campus Life Section -->
+    <section class="campus-life">
+        <h2>Campus Life</h2>
+        <p>Our campus provides a vibrant and enriching environment for students. From modern facilities to numerous clubs and activities, we ensure a well-rounded educational experience.</p>
+        <div class="facilities">
+            <div class="facility">
+                <h3>Library</h3>
+                <p>The library is a hub of knowledge, equipped with a vast collection of books, research papers, and digital resources. It provides a quiet and conducive environment for study and research.</p>
+            </div>
+            <div class="facility">
+                <h3>Hostels</h3>
+                <p>Our hostels offer comfortable and secure accommodation for students. With modern amenities and a friendly atmosphere, students can focus on their studies and enjoy their stay.</p>
+            </div>
+            <div class="facility">
+                <h3>Sports Complex</h3>
+                <p>The sports complex includes facilities for various sports including cricket, football, basketball, and indoor games. We encourage students to participate in sports to maintain a healthy balance.</p>
+            </div>
+            <div class="facility">
+                <h3>Cafeteria</h3>
+                <p>The cafeteria serves a variety of meals and snacks. It is a popular spot for students to gather, socialize, and relax between classes.</p>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+<footer id="footer">
+    <p>&copy; 2024 Government College of Engineering, Kolhapur. All rights reserved.</p>
+    <div class="social-media">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+    </div>
+    <div class="animated-footer-icons">
+        <img src="facebook-icon.png" alt="Facebook Icon">
+        <img src="twitter-icon.png" alt="Twitter Icon">
+        <img src="instagram-icon.png" alt="Instagram Icon">
+    </div>
+</footer>
+
+
+    <!-- JavaScript for dynamic footer effect -->
+    <script>
+        // Change background color of footer dynamically
+        document.addEventListener("DOMContentLoaded", function () {
+            const footer = document.getElementById("footer");
+
+            // Add a fade-in animation to the footer background
+            footer.style.opacity = 0;
+            let opacity = 0;
+
+            const fadeInFooter = setInterval(function () {
+                if (opacity < 1) {
+                    opacity += 0.05;
+                    footer.style.opacity = opacity;
+                } else {
+                    clearInterval(fadeInFooter);
+                }
+            }, 50); // Speed of the fade-in animation
+        });
+    </script>
+</body>
+
+</html>

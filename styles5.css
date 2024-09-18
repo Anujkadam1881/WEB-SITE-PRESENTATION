@@ -1,0 +1,232 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    /* White background for the page */
+    color: #000000;
+    /* Black text color */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background color */
+}
+
+/* Header Styles */
+header {
+    background-color: #333; /* Change to #333 for consistency */
+    color: #fff;
+    padding: 10px 20px; /* Adjust padding as needed */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.logo img {
+    height: 50px; /* Keep the same height */
+    width: auto; /* Maintain aspect ratio */
+    transition: opacity 0.4s ease, transform 0.4s ease, filter 0.4s ease;
+    cursor: pointer;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+    opacity: 0.8;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 0;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: #ddd;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+.campus-life {
+    padding: 40px;
+    background-color: #ffffff;
+    /* White background for the campus life section */
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+    /* Smooth transition for section transform */
+}
+
+.campus-life h2 {
+    text-align: center;
+    color: #000000;
+    /* Black color for section heading */
+    transition: transform 0.3s ease;
+    /* Smooth transition for heading transform */
+}
+
+.campus-life h2:hover {
+    transform: scale(1.05);
+    /* Slightly enlarge heading on hover */
+}
+
+.facilities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.facility {
+    background-color: #f4f4f4;
+    /* Light grey background for facility boxes */
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1 1 calc(50% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Smooth transitions for background and transform */
+}
+
+.facility:hover {
+    background-color: #eaeaea;
+    /* Darker grey on hover */
+    transform: scale(1.02);
+    /* Slightly enlarge box on hover */
+}
+
+.facility h3 {
+    color: #000000;
+    /* Black color for facility titles */
+    transition: color 0.3s ease;
+    /* Smooth transition for color */
+}
+
+.facility p {
+    color: #333333;
+    /* Dark grey color for facility descriptions */
+}
+
+/* Footer Styles */
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background color */
+    animation: fadeIn 1s ease-out;
+    /* Add fade-in animation to footer */
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-media a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Smooth transition for link color and transform effect */
+}
+
+.social-media a:hover {
+    color: #dddddd;
+    /* Slightly lighter color on hover */
+    text-decoration: underline;
+    transform: scale(1.1);
+    /* Slightly scale up the social media link on hover */
+}
+
+/* Keyframe animations */
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Fade-in animation for footer */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

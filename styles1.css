@@ -1,0 +1,292 @@
+/* Basic Reset and Global Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    transition: transform 0.4s ease, filter 0.4s ease, opacity 0.4s ease;
+    cursor: pointer;
+}
+
+.logo-img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+    opacity: 0.8;
+}
+
+nav {
+    flex-grow: 1;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: #ddd;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Banner Styles */
+
+/* Banner Styles */
+
+.banner {
+    background: url('download1.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff; /* Ensure text color is white for contrast */
+    text-align: center;
+    padding: 120px 20px; /* Increased padding for more emphasis */
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.banner h1 {
+    font-size: 3em; /* Increased font size for prominence */
+    margin: 0;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    opacity: 0; /* Initially hidden for transition effect */
+    transform: translateY(20px); /* Start position for transition */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Added text shadow for better visibility */
+}
+
+.banner p {
+    font-size: 1.8em; /* Increased font size for prominence */
+    margin: 10px 0 0;
+    color: #fff; /* Ensure text color is white for contrast */
+    opacity: 0; /* Initially hidden for transition effect */
+    transform: translateY(20px); /* Start position for transition */
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7); /* Added text shadow for better visibility */
+}
+
+.banner:hover h1, .banner:hover p {
+    opacity: 1; /* Fade in on hover */
+    transform: translateY(0); /* Slide up on hover */
+}
+
+/* About Us Section */
+
+.about-us {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.about-us h2 {
+    text-align: center;
+    color: #333;
+}
+
+.vision-mission {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+}
+
+.vision-mission div {
+    flex: 1;
+    min-width: 250px;
+    background: #000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.vision-mission div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.vision-mission h3 {
+    color: #fff;
+}
+
+.vision-mission p {
+    color: #ddd;
+}
+
+/* Button Styles */
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer Styles */
+
+/* Floating animation for elements over the footer */
+@keyframes floating {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+/* Styling for the animated icons with decreased size, maintaining aspect ratio */
+.animated-footer-icons img {
+    width: 30px; /* Only set the width, height will adjust automatically */
+    margin: 0 10px; /* Adjusted margin for smaller icons */
+    animation: floating 3s ease-in-out infinite;
+}
+
+.animated-footer-icons img:hover {
+    animation-play-state: paused;
+}
+
+
+  
+  .animated-footer-icons img {
+    width: 50px;
+    margin: 0 15px;
+    animation: floating 3s ease-in-out infinite;
+  }
+  
+  .animated-footer-icons img:hover {
+    animation-play-state: paused;
+  }
+  
+/* Image Gallery Hover Effect */
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    filter: brightness(0.8);
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item::after {
+    content: 'View More';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .logo-img {
+        height: 40px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    .banner {
+        padding: 80px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner h1 {
+        font-size: 2em;
+    }
+    .banner p {
+        font-size: 1.2em;
+    }
+}

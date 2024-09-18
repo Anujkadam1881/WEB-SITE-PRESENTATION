@@ -1,0 +1,249 @@
+/* General Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Smooth transition for background and text color */
+}
+
+/* Header Styles */
+header {
+    background-color: #333; /* Change to #333 for consistency */
+    color: #fff;
+    padding: 10px 20px; /* Adjust padding as needed */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.logo img {
+    height: 50px; /* Keep the same height */
+    width: auto; /* Maintain aspect ratio */
+    transition: opacity 0.4s ease, transform 0.4s ease, filter 0.4s ease;
+    cursor: pointer;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+    opacity: 0.8;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 0;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: #ddd;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.programs {
+    padding: 40px;
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background color */
+}
+
+.programs h2 {
+    text-align: center;
+    color: #000000;
+    transition: color 0.3s ease;
+    /* Smooth transition for heading color */
+}
+
+.program-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Add gap between program boxes */
+}
+
+.program {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1 1 calc(50% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    /* Smooth transition for transform, shadow, and background color */
+    animation: slideUp 1s ease-out;
+    /* Apply sliding animation when the page loads */
+}
+
+.program:hover {
+    transform: translateY(-10px);
+    /* Slightly lift the program box on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Enhance the shadow effect */
+    background-color: #e0e0e0;
+    /* Lighten background color on hover */
+    animation: none;
+    /* Remove animation on hover to prevent interference */
+}
+
+.program h3 {
+    color: #000000;
+    transition: color 0.3s ease;
+    /* Smooth transition for title color */
+}
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background color */
+    animation: fadeIn 1s ease-out;
+    /* Add fade-in animation to footer */
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-media a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Smooth transition for link color and transform effect */
+}
+
+.social-media a:hover {
+    color: #dddddd;
+    /* Slightly lighter color on hover */
+    text-decoration: underline;
+    transform: scale(1.1);
+    /* Slightly scale up the social media link on hover */
+}
+
+/* Keyframe animations */
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Fade-in animation for footer */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Applying animations */
+
+header {
+    animation: fadeIn 1s ease-out;
+}
+
+.programs {
+    animation: slideIn 1s ease-out;
+}
+
+.program:nth-child(1) {
+    animation: slideLeft 1s ease-out;
+}
+
+.program:nth-child(2) {
+    animation: slideRight 1s ease-out;
+}
+
+.program:nth-child(3) {
+    animation: slideUp 1s ease-out;
+}
+
+.program:nth-child(4) {
+    animation: slideDown 1s ease-out;
+}
+
+.program:nth-child(5) {
+    animation: slideUp 1s ease-out;
+}

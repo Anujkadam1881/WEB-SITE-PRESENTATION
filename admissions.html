@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles4.css">
+    <style>
+        /* Your existing styles */
+        
+        /* Styles for dynamic content */
+        .admissions-details {
+            display: none; /* Hide by default */
+            padding: 20px;
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .admissions-details.active {
+            display: block; /* Show when active */
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .back-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Chatbot Styles */
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 350px;
+            max-width: 100%;
+            background-color: white;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: none; /* Initially hidden */
+        }
+
+        .chatbot-header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chatbot-header button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .chatbot-messages {
+            padding: 10px;
+            height: 300px;
+            overflow-y: scroll;
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .chatbot-input {
+            display: flex;
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+
+        .chatbot-input input {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .chatbot-input button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-left: 10px;
+        }
+
+        /* Chatbot toggle button */
+        .chatbot-toggle-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        /* FAQ button styles */
+        .faq-btn {
+            display: block;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #e9ecef;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: left;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .faq-btn:hover {
+            background-color: #d6d9db;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions - Government College of Engineering Kolhapur</title>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <img src="gcoeklogo.png" alt="Government College of Engineering Kolhapur logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="campus-life.html">Campus Life</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Admissions Section -->
+            <section class="admissions">
+                <h2>Admissions</h2>
+                <p>We are excited to welcome new students to our college. Our admission process is straightforward and designed to help us find the best candidates for our programs.</p>
+                <ul>
+                    <li><strong>Undergraduate Admissions:</strong> Based on performance in entrance exams and previous academic records. We also consider extracurricular achievements.</li>
+                    <li><strong>Postgraduate Admissions:</strong> Includes an entrance test, an interview, and academic credentials. We seek candidates with strong research interests and academic excellence.</li>
+                    <li><strong>Application Deadlines:</strong> Typically in June for undergraduate programs and November for postgraduate programs. Please check our website for exact dates and further details.</li>
+                </ul>
+                <a href="#" class="cta-btn" id="learn-more-btn">Learn More</a>
+
+                <!-- Placeholder for dynamic content -->
+                <div id="admissions-details" class="admissions-details">
+                    <h3>Previous Year Admissions Details</h3>
+                    <p>Here are the details for the admissions process of the previous year:</p>
+                    <ul>
+                        <li><strong>Undergraduate Admissions:</strong> Based on entrance exams, academic records, and extracurricular achievements. Details about cut-off scores and criteria can be found in the attached documents.</li>
+                        <li><strong>Postgraduate Admissions:</strong> Included entrance tests, interviews, and academic credentials. Information about eligibility and selection criteria is provided in the following sections.</li>
+                        <li><strong>Application Deadlines:</strong> For undergraduate programs, the deadline was June 30th. For postgraduate programs, it was November 15th. Please check for any updates on our website.</li>
+                    </ul>
+                    <a href="#" class="back-btn" id="back-btn">Back to Admissions</a>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer">
+            <p>&copy; 2024 Government College of Engineering, Kolhapur. All rights reserved.</p>
+            <div class="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+            <div class="animated-footer-icons">
+                <img src="facebook-icon.png" alt="Facebook Icon">
+                <img src="twitter-icon.png" alt="Twitter Icon">
+                <img src="instagram-icon.png" alt="Instagram Icon">
+            </div>
+        </footer>
+        
+        <!-- Chatbot toggle button -->
+        <button class="chatbot-toggle-btn" id="chatbot-toggle-btn">Chat with us</button>
+
+        <!-- Chatbot container -->
+        <div class="chatbot-container" id="chatbot-container">
+            <div class="chatbot-header">
+                <span>Admissions Chatbot</span>
+                <button id="close-chatbot-btn">X</button>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages">
+                <p><strong>Bot:</strong> Hi! How can I assist you today? You can ask me about admissions, programs, or deadlines.</p>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbot-input" placeholder="Type a message...">
+                <button id="send-btn">Send</button>
+            </div>
+            <div class="chatbot-faq">
+                <button class="faq-btn" data-answer="We offer undergraduate programs in Computer Science, Mechanical Engineering, Civil Engineering, Electrical Engineering, and more. For a detailed list, please visit our Programs page.">Undergraduate Programs</button>
+                <button class="faq-btn" data-answer="Our postgraduate programs include M.Tech in various specializations such as Structural Engineering, VLSI Design, and Thermal Engineering. Check our Postgraduate Programs page for details.">Postgraduate Programs</button>
+                <button class="faq-btn" data-answer="For undergraduate admissions, you need to have completed your higher secondary education with relevant subjects and scores in entrance exams like JEE Main. For detailed requirements, visit our Admissions page.">Undergraduate Admissions Requirements</button>
+                <button class="faq-btn" data-answer="You can apply for postgraduate programs through our online application portal. Make sure to check the Application Procedure for detailed steps and requirements.">Postgraduate Application Procedure</button>
+                <button class="faq-btn" data-answer="The fee structure varies by program. For specific details on tuition and other fees, please refer to the Fee Structure section on our website.">Fee Structure</button>
+                <button class="faq-btn" data-answer="You can contact the admissions office via email at admissions@gcoekolhapur.ac.in or call us at +91-231-1234567 for any queries.">Contact for Admissions</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Toggle chatbot visibility
+        document.getElementById('chatbot-toggle-btn').addEventListener('click', function() {
+            var chatbot = document.getElementById('chatbot-container');
+            chatbot.style.display = (chatbot.style.display === 'none' || chatbot.style.display === '') ? 'block' : 'none';
+        });
+
+        // Close chatbot
+        document.getElementById('close-chatbot-btn').addEventListener('click', function() {
+            document.getElementById('chatbot-container').style.display = 'none';
+        });
+
+        // Handle sending messages
+        document.getElementById('send-btn').addEventListener('click', function() {
+            var userInput = document.getElementById('chatbot-input').value;
+            var chatbotMessages = document.getElementById('chatbot-messages');
+            if (userInput.trim() !== '') {
+                var userMessage = document.createElement('p');
+                userMessage.innerHTML = '<strong>You:</strong> ' + userInput;
+                chatbotMessages.appendChild(userMessage);
+
+                var botResponse = document.createElement('p');
+                botResponse.innerHTML = '<strong>Bot:</strong> Sorry, I didn\'t understand that. Please select an option from the FAQs below.';
+                chatbotMessages.appendChild(botResponse);
+
+                document.getElementById('chatbot-input').value = '';
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }
+        });
+
+        // Handle FAQ button clicks
+        document.querySelectorAll('.faq-btn').forEach(function(button) {
+            button.addEventListener('click', function() {
+                var answer = this.getAttribute('data-answer');
+                var chatbotMessages = document.getElementById('chatbot-messages');
+                
+                var botMessage = document.createElement('p');
+                botMessage.innerHTML = '<strong>Bot:</strong> ' + answer;
+                chatbotMessages.appendChild(botMessage);
+
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            });
+        });
+
+        // Handle Learn More button click
+        document.getElementById('learn-more-btn').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('admissions-details').classList.add('active');
+        });
+
+        // Handle Back button click
+        document.getElementById('back-btn').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('admissions-details').classList.remove('active');
+        });
+    </script>
+</body>
+
+</html>

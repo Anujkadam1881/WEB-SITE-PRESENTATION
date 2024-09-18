@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles6.css">
+    <style>
+        /* Form styling */
+        form {
+            max-width: 600px;
+            margin: 40px auto;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        form:hover {
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            transform: scale(1.02);
+        }
+
+        form label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        form input[type="text"]:focus,
+        form input[type="email"]:focus,
+        form textarea:focus {
+            border-color: #007bff;
+            /* Blue focus border */
+        }
+
+        form button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: black;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .social-media {
+            margin-top: 10px;
+        }
+
+        .social-media a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-media a:hover {
+            color: #dddddd;
+            text-decoration: underline;
+            transform: scale(1.1);
+        }
+
+        /* Floating animation for elements over the footer */
+        @keyframes floating {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Styling for the animated icons */
+        .animated-footer-icons {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .animated-footer-icons img {
+            width: 50px;
+            margin: 0 15px;
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        .animated-footer-icons img:hover {
+            animation-play-state: paused;
+        }
+
+        /* Google Maps icon styling */
+        .maps-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .maps-link img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Government College of Engineering Kolhapur</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="gcoeklogo.png" alt="College Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="campus-life.html">Campus Life</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Us Section -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need further information, please reach out to us through the following contact details. We are here to assist you.</p>
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>Address</h3>
+                <p class="address">
+                    <img src="google_maps.png" alt="Google Maps Icon">
+                    <a href="https://www.google.com/maps/place/Your+Location" target="_blank">
+                        Government College of Engineering, Kolhapur<br> Maharashtra, India, 416001
+                    </a>
+                </p>
+            </div>
+            
+            <div class="contact-item">
+                <h3>Phone</h3>
+                <p>+91 231 260 2210</p>
+            </div>
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p>info@gcekolhapur.ac.in</p>
+            </div>
+        </div>
+        <!-- Enhanced Contact Form -->
+        <form id="contact-form" action="#" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>&copy; 2024 Government College of Engineering, Kolhapur. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+        <div class="animated-footer-icons">
+            <img src="facebook-icon.png" alt="Facebook Icon">
+            <img src="twitter-icon.png" alt="Twitter Icon">
+            <img src="instagram-icon.png" alt="Instagram Icon">
+        </div>
+    </footer>
+
+    <!-- JavaScript for dynamic behavior -->
+    <script>
+        // Auto-save form data in localStorage
+        const form = document.getElementById('contact-form');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
+
+        // Load saved form data from localStorage
+        window.addEventListener('load', () => {
+            if (localStorage.getItem('name')) {
+                nameInput.value = localStorage.getItem('name');
+            }
+            if (localStorage.getItem('email')) {
+                emailInput.value = localStorage.getItem('email');
+            }
+            if (localStorage.getItem('message')) {
+                messageInput.value = localStorage.getItem('message');
+            }
+        });
+
+        // Save form data to localStorage on input
+        nameInput.addEventListener('input', () => {
+            localStorage.setItem('name', nameInput.value);
+        });
+
+        emailInput.addEventListener('input', () => {
+            localStorage.setItem('email', emailInput.value);
+        });
+
+        messageInput.addEventListener('input', () => {
+            localStorage.setItem('message', messageInput.value);
+        });
+
+        // Clear localStorage on form submit
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent actual form submission
+            localStorage.removeItem('name');
+            localStorage.removeItem('email');
+            localStorage.removeItem('message');
+            alert('Message sent successfully!');
+            form.reset();
+        });
+
+        // JavaScript for footer fade-in effect
+        document.addEventListener("DOMContentLoaded", function () {
+            const footer = document.getElementById("footer");
+
+            footer.style.opacity = 0;
+            let opacity = 0;
+
+            const fadeInFooter = setInterval(function () {
+                if (opacity < 1) {
+                    opacity += 0.05;
+                    footer.style.opacity = opacity;
+                } else {
+                    clearInterval(fadeInFooter);
+                }
+            }, 50);
+        });
+    </script>
+</body>
+
+</html>

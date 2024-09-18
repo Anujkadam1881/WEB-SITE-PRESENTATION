@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles2.css">
+    <style>
+          /* Footer styling */
+          footer {
+            background-color: black;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .social-media {
+            margin-top: 10px;
+        }
+
+        .social-media a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .social-media a:hover {
+            text-decoration: underline;
+        }
+
+        /* Floating animation for elements over the footer */
+        @keyframes floating {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Styling for the animated icons */
+        .animated-footer-icons {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .animated-footer-icons img {
+            width: 50px;
+            margin: 0 15px;
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        .animated-footer-icons img:hover {
+            animation-play-state: paused;
+        }
+
+    </style>
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs - Government College of Engineering Kolhapur</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="gcoeklogo.png" alt="Government College of Engineering Kolhapur logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="campus-life.html">Campus Life</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Programs Section -->
+    <section class="programs">
+        <h2>Our Programs</h2>
+        <p>At Government College of Engineering, Kolhapur, we offer a range of undergraduate and postgraduate programs designed to provide students with the skills and knowledge necessary to excel in their careers.</p>
+        <div class="program-list">
+            <div class="program">
+                <h3>Artificial Intelligence & Data Science</h3>
+                <p>This program delves into the latest advancements in AI and data analytics, preparing students for roles in this rapidly evolving field.</p>
+            </div>
+            <div class="program">
+                <h3>Computer Science</h3>
+                <p>Focuses on software engineering, computing fundamentals, and advanced technologies, equipping students for a range of tech-related careers.</p>
+            </div>
+            <div class="program">
+                <h3>Electrical Engineering</h3>
+                <p>Offers a comprehensive understanding of electrical systems, automation, and energy management, with a focus on practical applications.</p>
+            </div>
+            <div class="program">
+                <h3>Electronics & Telecommunication</h3>
+                <p>Covers communication systems, electronics, and network technologies, preparing students for careers in telecommunications and electronics.</p>
+            </div>
+            <div class="program">
+                <h3>Mechanical Engineering</h3>
+                <p>Provides in-depth knowledge of mechanical design, manufacturing processes, and thermodynamics, with hands-on experience in mechanical systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer id="footer">
+    <p>&copy; 2024 Government College of Engineering, Kolhapur. All rights reserved.</p>
+    <div class="social-media">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+    </div>
+    <div class="animated-footer-icons">
+        <img src="facebook-icon.png" alt="Facebook Icon">
+        <img src="twitter-icon.png" alt="Twitter Icon">
+        <img src="instagram-icon.png" alt="Instagram Icon">
+    </div>
+</footer>
+
+
+    <!-- JavaScript for dynamic footer effect -->
+    <script>
+        // Change background color of footer dynamically
+        document.addEventListener("DOMContentLoaded", function () {
+            const footer = document.getElementById("footer");
+
+            // Add a fade-in animation to the footer background
+            footer.style.opacity = 0;
+            let opacity = 0;
+
+            const fadeInFooter = setInterval(function () {
+                if (opacity < 1) {
+                    opacity += 0.05;
+                    footer.style.opacity = opacity;
+                } else {
+                    clearInterval(fadeInFooter);
+                }
+            }, 50); // Speed of the fade-in animation
+        });
+    </script>
+</body>
+
+</html>

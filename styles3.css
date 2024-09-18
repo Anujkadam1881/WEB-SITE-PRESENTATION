@@ -1,0 +1,151 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    /* White background for the page */
+    color: #000000;
+    /* Black text color */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background color */
+}
+
+header {
+    background-color: #000000;
+    /* Black background for header */
+    color: #ffffff;
+    /* White text color in header */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s ease;
+    /* Smooth transition for header background */
+}
+
+.logo img {
+    height: 50px;
+    transition: opacity 0.3s ease;
+    /* Smooth transition for logo image */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    /* White text color for navigation links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    /* Smooth transitions for color and text-shadow */
+}
+
+nav ul li a:hover {
+    color: #f4f4f4;
+    /* Light grey on hover */
+    text-shadow: 1px 1px 2px #000000;
+    /* Subtle shadow effect on hover */
+}
+
+.admissions {
+    padding: 40px;
+    background-color: #ffffff;
+    /* White background for the admissions section */
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+    /* Smooth transition for section transform */
+}
+
+.admissions h2 {
+    text-align: center;
+    color: #000000;
+    /* Black color for section heading */
+    transition: transform 0.3s ease;
+    /* Smooth transition for heading transform */
+}
+
+.admissions h2:hover {
+    transform: scale(1.05);
+    /* Slightly enlarge heading on hover */
+}
+
+.admissions ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.admissions ul li {
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+    /* Smooth transition for list item color */
+}
+
+.admissions ul li:hover {
+    color: #333333;
+    /* Dark grey on hover */
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000000;
+    /* Black background for button */
+    color: #ffffff;
+    /* White text color for button */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Smooth transitions for button background and transform */
+}
+
+.cta-btn:hover {
+    background-color: #333333;
+    /* Dark grey background on hover */
+    transform: scale(1.05);
+    /* Slightly enlarge button on hover */
+}
+
+footer {
+    background-color: #000000;
+    /* Black background for footer */
+    color: #ffffff;
+    /* White text color in footer */
+    text-align: center;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+    /* Smooth transition for footer background */
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-media a {
+    color: #ffffff;
+    /* White text color for social media links */
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    /* Smooth transitions for color and text-shadow */
+}
+
+.social-media a:hover {
+    color: #f4f4f4;
+    /* Light grey on hover */
+    text-shadow: 1px 1px 2px #000000;
+    /* Subtle shadow effect on hover */
+}

@@ -1,0 +1,214 @@
+/* General Styles */
+
+html, body {
+    height: 100%; /* Ensure the full height for Flexbox layout */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* White background for the page */
+    color: #000000; /* Black text color */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Flex Container for Page Layout */
+.page-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+
+/* Header Styles */
+header {
+    background-color: #333; /* Change to #333 for consistency */
+    color: #fff;
+    padding: 10px 20px; /* Adjust padding as needed */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.logo img {
+    height: 50px; /* Keep the same height */
+    width: auto; /* Maintain aspect ratio */
+    transition: opacity 0.4s ease, transform 0.4s ease, filter 0.4s ease;
+    cursor: pointer;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+    opacity: 0.8;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 0;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: #ddd;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+/* Main Content Styles */
+main {
+    flex: 1; /* Allows main content to grow and take up available space */
+}
+
+/* Admissions Section Styles */
+
+.admissions {
+    padding: 40px;
+    background-color: #ffffff; /* White background for admissions section */
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for transform and shadow */
+    animation: slideIn 1s ease-out; /* Animation for admissions section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial shadow effect */
+}
+
+.admissions h2 {
+    text-align: center;
+    color: #000000; /* Black color for section heading */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for heading */
+}
+
+.admissions h2:hover {
+    transform: scale(1.05); /* Slightly enlarge heading on hover */
+    color: #333333; /* Change color on hover */
+}
+
+.admissions ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.admissions ul li {
+    margin-bottom: 15px;
+    transition: color 0.3s ease; /* Smooth transition for list item color */
+}
+
+.admissions ul li:hover {
+    color: #333333; /* Dark grey on hover */
+}
+
+/* CTA Button Styles */
+
+.cta-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000000; /* Black background for button */
+    color: #ffffff; /* White text color for button */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for button background and transform */
+}
+
+.cta-btn:hover {
+    background-color: #333333; /* Dark grey background on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Footer Styles */
+
+/* Footer styling */
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+/* Floating animation for elements over the footer */
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Styling for the animated icons */
+.animated-footer-icons {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.animated-footer-icons img {
+    width: 40px; /* Adjusted size for better appearance */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 10px; /* Adjusted margin for proper spacing */
+    animation: floating 3s ease-in-out infinite;
+}
+
+.animated-footer-icons img:hover {
+    animation-play-state: paused;
+}
+
