@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government College of Engineering Kolhapur</title>
+    <link rel="stylesheet" href="styles1.css">
+    <style>
+        /* Footer styling */
+        footer {
+            background-color: black;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .social-media {
+            margin-top: 10px;
+        }
+
+        .social-media a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .social-media a:hover {
+            text-decoration: underline;
+        }
+
+        /* Floating animation for elements over the footer */
+        @keyframes floating {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Styling for the animated icons */
+        .animated-footer-icons {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .animated-footer-icons img {
+            width: 50px;
+            margin: 0 15px;
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        .animated-footer-icons img:hover {
+            animation-play-state: paused;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="gcoeklogo.png" alt="College Logo" class="logo-img">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="campus-life.html">Campus Life</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Banner -->
+    <section class="banner">
+        <h1>Welcome to Government College of Engineering Kolhapur</h1>
+        <p>Empowering the Future of Technology with Excellence in Education.</p>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-us">
+        <h2>About Us</h2>
+        <p>Government College of Engineering, Kolhapur was established in 1961 and has grown to become one of the leading engineering institutes in Maharashtra. Our mission is to provide world-class technical education and research opportunities.</p>
+        <div class="vision-mission">
+            <div data-info="Our Vision: 1. To nurture technically sound professionals with global competence. 2. To be a center of excellence in engineering education. 3. To drive innovation through cutting-edge research and development.">
+                <h3>Our Vision</h3>
+                <p>1. To nurture technically sound professionals with global competence.</p>
+                <p>2. To be a center of excellence in engineering education.</p>
+                <p>3. To drive innovation through cutting-edge research and development.</p>
+            </div>
+            <div data-info="Our Mission: 1. Providing quality education and fostering an environment conducive to learning. 2. Promoting research and innovation to solve real-world problems. 3. Developing well-rounded individuals who can contribute positively to society.">
+                <h3>Our Mission</h3>
+                <p>1. Providing quality education and fostering an environment conducive to learning.</p>
+                <p>2. Promoting research and innovation to solve real-world problems.</p>
+                <p>3. Developing well-rounded individuals who can contribute positively to society.</p>
+            </div>
+        </div>
+    </section>
+
+  <!-- Footer -->
+<footer id="footer">
+    <p>&copy; 2024 Government College of Engineering, Kolhapur. All rights reserved.</p>
+    <div class="social-media">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+    </div>
+    <div class="animated-footer-icons">
+        <img src="facebook-icon.png" alt="Facebook Icon">
+        <img src="twitter-icon.png" alt="Twitter Icon">
+        <img src="instagram-icon.png" alt="Instagram Icon">
+    </div>
+</footer>
+
+
+    <!-- JavaScript for dynamic footer effect -->
+    <script>
+        // Change background color of footer dynamically
+        document.addEventListener("DOMContentLoaded", function () {
+            const footer = document.getElementById("footer");
+
+            // Add a fade-in animation to the footer background
+            footer.style.opacity = 0;
+            let opacity = 0;
+
+            const fadeInFooter = setInterval(function () {
+                if (opacity < 1) {
+                    opacity += 0.05;
+                    footer.style.opacity = opacity;
+                } else {
+                    clearInterval(fadeInFooter);
+                }
+            }, 50); // Speed of the fade-in animation
+        });
+    </script>
+</body>
+
+</html>
